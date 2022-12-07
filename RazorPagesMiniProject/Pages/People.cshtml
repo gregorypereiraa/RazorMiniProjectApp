@@ -1,0 +1,32 @@
+﻿@page
+@model RazorPagesMiniProject.Pages.People
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<h1>People</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="person.FirstName"></label>
+        <input type="text" asp-for="person.FirstName" placeholder="First Name"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="person.LastName"></label>
+        <input type="text" asp-for="person.LastName" placeholder="Last Name"/>
+    </div>
+
+    <div class="form-group">
+        <input asp-for="person.IsActive" type="checkbox"/>
+        <label asp-for="person.IsActive"></label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</html>
